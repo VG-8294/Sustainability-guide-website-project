@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#nav{
+    text-align: center;
+    height:150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: fixed;
+    z-index: 100;
+    justify-content: space-between;
+}
+#logo{
+    color:black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-weight: 800;
+}
+#logo span{
+    color: green;
+}
+#logo a{
+    text-decoration: none;
+    color: black;
+}
+#image{
+    height:75px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+#nav h4{
+    margin: 0 15px;
+    position: relative;
+    color:black ;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 100;
+    transition: all ease 0.5s;
+}
+#nav h4 a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+#nav h4 a:hover{
+    color: white;
+}
+#nav h4 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+#nav h4 a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+#nav h4:hover{
+    background-color: green;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+#buttons{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+video{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#main{
+    position: relative;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:black;
+    z-index: 10;
+}
+#page1 img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#content{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#page1 h1{
+    font-size: 70px;
+    font-weight: 900;
+    position: relative;
+}
+#page1 span{
+    color: green;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#page1 p{
+    width: 50%;
+    font-size: 18px;
+    font-weight: 500;
+}
+#page2{
+    min-height: 100vh;
+}
+#page2{
+    text-align: center;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/images/light\ white.jpg");
+    /* background: radial-gradient(circle, green, white); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#heading{
+    position: relative;
+    top: 140px;
+    color: black;
+    font-size: 40px;
+}
+#card-container{
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+#line1{
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    position: relative;
+}
+#line2{
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.card{
+    height: 65%;
+    width: 22%;
+    background-color: blue;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-image: url("https://media.assettype.com/edexlive%2Fimport%2F2021%2F7%2F27%2Foriginal%2Fcarbon-footprint-make-difference-illustration.jpg?w=1200&auto=format%2Ccompress&fit=max");
+}
+#card2{
+    background-image: url("https://img.freepik.com/free-vector/quick-helpful-tips-advice-yellow-background-vector-illustration_1017-40994.jpg?w=740&t=st=1719051166~exp=1719051766~hmac=90d2fe17c5a9d9095742e2c2668dc8e7684c11e18d2d8b771f5582cab5e78c14");
+}
+#card3{
+    background-image: url("https://cdn.pixabay.com/photo/2015/01/13/13/21/person-598191_1280.jpg");
+}
+#card4{
+    background-image: url("https://img.freepik.com/free-vector/select-concept-illustration_114360-383.jpg?t=st=1719051330~exp=1719054930~hmac=967f2a94c2b3b554fb45719b7772365dd1010559f40cf54918420967754a0869&w=740");
+}
+#card5{
+    background-image: url("https://cdn.pixabay.com/photo/2024/03/25/14/29/ai-generated-8654872_960_720.png");
+}
+#card6{
+    background-image: url("https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+#overlay{
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(black, green, black);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: all ease 0.6s;
+    cursor: pointer;
+    color: white;
+}
+#overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.card:hover #overlay::after {
+    opacity: 1;
+}
+
+#overlay h1{
+    margin-bottom: 10px;
+}
+.card:hover #overlay{
+    opacity: 0.85;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,30deg);
+}
+
+
+
+
