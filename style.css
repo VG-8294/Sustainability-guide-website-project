@@ -41,7 +41,7 @@ html, body {
     margin-left: 10px;
     border-radius: 50%;
 }
-#nav h4{
+#btn, #signup{
     margin: 0 15px;
     position: relative;
     color:black ;
@@ -50,16 +50,13 @@ html, body {
     cursor: pointer;
     z-index: 100;
     transition: all ease 0.5s;
-}
-#nav h4 a{
     text-decoration: none;
     color: black;
     display: block;
 }
-#nav h4 a:hover{
-    color: white;
-}
-#nav h4 a::after {
+
+
+#btn::after {
     content: '';
     position: absolute;
     left: 0;
@@ -71,13 +68,35 @@ html, body {
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
 }
-#nav h4 a:hover::after {
+#signup::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+#btn:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
+#signup:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
-#nav h4:hover{
+#btn:hover{
+    background-color: green;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+#signup:hover{
     background-color: green;
     color: white;
     padding: 12px;
@@ -115,6 +134,7 @@ video{
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: -1;
 }
 #content{
     z-index: 1;
@@ -201,7 +221,8 @@ video{
     background-position: center;
     border-radius: 20px;
     overflow: hidden;
-    transition: all ease 0.6s;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
 }
 #card1{
     background-image: url("https://media.assettype.com/edexlive%2Fimport%2F2021%2F7%2F27%2Foriginal%2Fcarbon-footprint-make-difference-illustration.jpg?w=1200&auto=format%2Ccompress&fit=max");
@@ -260,7 +281,9 @@ video{
     opacity: 0.85;
 }
 .card:hover{
-    transform: rotate3d(-1,1,0,30deg);
+    transform: scale(1.1) ; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
+    background-color: #e0e0e0; 
 }
 
 

@@ -43,5 +43,15 @@ const originalColor = "green";  // Original text color
                 scrub: 15
             }
         });
-
-        
+        const body = document.querySelector("body")
+        const main = document.querySelector('#main')
+        const SignUp = document.querySelector('#signup');
+        SignUp.addEventListener('click', function(){
+            const entries = document.createElement('form')
+            main.appendChild(entries)
+            const name = document.createElement('label')
+            name.textContent = "Name"
+            const nameIn = document.createElement('input')
+            entries.appendChild(name)
+            entries.appendChild(nameIn)
+        })
