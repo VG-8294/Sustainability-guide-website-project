@@ -55,3 +55,5 @@ const originalColor = "green";  // Original text color
             entries.appendChild(name)
             entries.appendChild(nameIn)
         })
+  
+  
