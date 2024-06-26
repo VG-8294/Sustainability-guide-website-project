@@ -1,10 +1,9 @@
-body,
-html {
+body{
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     font-family: 'Gilroy-Bold', sans-serif;
 }
 
@@ -15,6 +14,7 @@ html {
     gap: 20px;
     font-size: 25px;
     font-weight: 800;
+    margin-top: 30px;
 }
 #logo span{
     color: green;
@@ -38,6 +38,7 @@ html {
     justify-content: center;
     color: white;
     z-index: 1;
+    overflow: auto;
 }
 
 .overlay::before {
@@ -58,29 +59,30 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 #signup-form {
     display: flex;
     flex-direction: column;
-    height: 72vh;
+    /* height: 72vh; */
     width: 28vw;
     gap: 10px;
     color: black;
-    /* border: none; */
-    border: 2px solid black;
-    padding: 45px;
+    border: none;
+    /* border: 2px solid black; */
+    padding: 56px;
     background: transparent;
     border-radius: 10px;
     font-size: 15px;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
 }
 
 #signup-form input{
     width: 100%;
-    padding: 5px 0;
+    padding: 10px 0;
     border: none;
     border-bottom: 1px solid black;
     outline: none;
@@ -88,13 +90,16 @@ html {
     background: transparent;
     color: #000;
 }
+#DOB{
+    padding-top: 14px ;
+    border-bottom: none;
+}
 #button{
     margin: 0 15px;
     width: 46%;
     border: 2px solid green;
     position: relative;
-    color:black ;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
     z-index: 100;
