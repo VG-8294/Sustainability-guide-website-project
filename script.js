@@ -43,6 +43,21 @@ const originalColor = "green";  // Original text color
                 scrub: 15
             }
         });
+
+        const menuIcon = document.querySelector('#menu-icon');
+        const menuBtns = document.querySelectorAll(".btn")
+        const dropdownMenu = document.querySelector('#dropdown');
+
+        menuIcon.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', function() {
+                const url = card.getAttribute('data-url');
+                window.location.href = url;
+            });
+        });
         
   
   

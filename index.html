@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -20,6 +21,13 @@
             <p><a href=""><span id="eco">Eco</span>Hub</a></p>
         </div>
         <div id="buttons">
+            <a href="#page1" class="btn" id="btn">Home</a>
+            <a href="#page2" class="btn" id="btn">Explore us!</a>
+            <a href="signup.html" class="btn" id="signup">Signup</a>
+            <a href="login.html" class="btn" id="btn">Login</a>
+            <i class="ri-menu-3-fill" id="menu-icon"></i>
+        </div>
+        <div class="dropdown-content" id="dropdown">
             <a href="#page1" id="btn">Home</a>
             <a href="#page2" id="btn">Explore us!</a>
             <a href="signup.html" id="signup">Signup</a>
@@ -43,55 +51,55 @@
         <h1 id="heading">Let's Explore us!</h1>
         <div id="card-container">
             <div id="line1">
-                <div class="card" id="card1">
+                <div class="card" id="card1" data-url="carbonFootprintCalc.html">
                     <div class="overlay1" id="overlay">
                         <h1>Carbon Footprint Calculator</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, inventore.</p>
+                        <p>Track and reduce your carbon footprint with personalized tips and insights using our carbon footprint calculator</p>
                     </div>
                 </div>
-                <div class="card" id="card2">
+                <div class="card" id="card2"data-url="tips.html">
                     <div class="overlay1" id="overlay">
                         <h1>Sustainability Tips</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, inventore.</p>
+                        <p>Discover practical sustainability tips to make eco-friendly choices every day</p>
                     </div>
                 </div>
-                <div class="card" id="card3">
+                <div class="card" id="card3" data-url="EcoBot.html">
                     <div class="overlay1" id="overlay">
-                        <h1>Success stories</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, inventore.</p>
+                        <h1>EcoBot</h1>
+                        <p>Meet EcoBot: Your virtual assistant for personalized sustainability advice and insights</p>
                     </div>
                 </div>
             </div>
             <div id="line2">
-                <div class="card" id="card4">
+                <div class="card" id="card4"data-url="sustain.html">
                     <div class="overlay1" id="overlay">
                         <h1>Sustainable alternatives</h1>
-                        <p>This is Nukul's Card</p>
+                        <p>Explore sustainable alternatives to everyday products and make eco-friendly choices</p>
                     </div>
                 </div>
                 <div class="card" id="card5">
                     <div class="overlay1" id="overlay">
                         <h1>Daily Challenge</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, inventore.</p>
+                        <p>Join daily challenges: Share your sustainable actions with images or videos and earn rewards!</p>
                     </div>
                 </div>
                 <div class="card" id="card6">
                     <div class="overlay1" id="overlay">
                         <h1>Workshops</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, inventore.</p>
+                        <p>Participate in workshops: Learn and engage with experts on sustainable living practices</p>
                     </div>
                 </div>
             </div>
         </div>
-        
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

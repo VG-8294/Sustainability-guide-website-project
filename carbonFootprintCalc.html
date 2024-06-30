@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+
+        .overlay{
+            display: flex;
+            align-items: center    ;
+        }
+        .overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://img.freepik.com/free-photo/view-green-forest-trees-with-co2_23-2149675038.jpg?w=360&t=st=1719721988~exp=1719722588~hmac=6562facace1d2ca6ee611291b7a4c6fda20a071614447a6db4d6c6de24c2ec91') no-repeat center center/cover;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        #signup-form{
+            color: white;
+            background-color: rgb(0, 0, 0, 0.7);
+            width: 100%;
+            font-weight: 700;
+        }
+        #signup-form input{
+            color: white;
+            border-bottom: 1px solid white;
+        }
+
+        @media (max-width:800px) {
+            #signup-form{
+                width: 70vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="overlay" class="overlay">
+        <div class="modal-content">
+            <div id="logo">
+                <img id="image" src="images/logo.jpg" alt="error">
+                <p><a href="index.html"><span id="eco">Eco</span>Hub</a></p>
+            </div>
+            <form id="signup-form">
+                <label for="electricityUsage">Electricity Usage (kWh)</label>
+                <input type="number" id="electricityUsage" name="electricityUsage" required><br><br>
+                <label for="fuelConsumption">Fuel Consumption (liters or cubic meters)</label>
+                <input type="number" id="fuelConsumption" name="fuelConsumption" required><br><br>
+                <label for="vehicleType">Vehicle Type</label>
+                <input type="text" id="vehicleType" name="vehicleType" required><br><br>
+                <label for="fuelEfficiency">Fuel Efficiency (mpg or l/100km)</label>
+                <input type="number" id="fuelEfficiency" name="fuelEfficiency" required><br><br>
+                <label for="distanceTraveled">Distance Traveled (miles or km)</label>
+                <input type="number" id="distanceTraveled" name="distanceTraveled" required><br><br>
+                <label for="flightDistance" class="light">Flight Distance (miles or km)</label>
+                <input type="number" id="flightDistance" name="flightDistance" class="light" required><br><br>
+                <label for="wasteGenerated" class="light">Waste Generated (kg or lbs)</label>
+                <input type="number" id="wasteGenerated" name="wasteGenerated" class="light" required><br><br>
+                <label for="dietType" class="light">Dietary Habits (e.g., Vegan, Vegetarian, Omnivore)</label>
+                <input type="text" id="dietType" name="dietType" class="light" required><br><br>
+                <label for="waterUsage" class="light">Water Usage (liters or gallons)</label>
+                <input type="number" id="waterUsage" name="waterUsage"  class="light"required><br><br>
+                <label for="goodsPurchased" class="light">Goods Purchased (amount and types)</label>
+                <input type="text" id="goodsPurchased" name="goodsPurchased" class="light" required><br><br>
+                <label for="buildingEnergy">Building Energy Efficiency</label>
+                <input type="text" id="buildingEnergy" name="buildingEnergy" required><br><br>
+                <label for="constructionMaterials">Construction Materials Used</label>
+                <input type="text" id="constructionMaterials" name="constructionMaterials" required><br><br>
+                <label for="agriculturalPractices">Agricultural Practices</label>
+                <input type="text" id="agriculturalPractices" name="agriculturalPractices" required><br><br>
+                <label for="landUseChanges">Land Use Changes (e.g., deforestation, reforestation)</label>
+                <input type="text" id="landUseChanges" name="landUseChanges" required><br><br>
+                <button type="submit" id="button">Calculate Carbon Footprint</button>
+            </form>
+        </div>
+</body>
+
+</html>

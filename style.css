@@ -29,7 +29,7 @@ html, body {
     font-size: 25px;
     font-weight: 800;
 }
-#logo span{
+#eco{
     color: green;
 }
 #logo a{
@@ -41,73 +41,84 @@ html, body {
     margin-left: 10px;
     border-radius: 50%;
 }
-#btn, #signup{
-    margin: 0 15px;
-    position: relative;
-    color:black ;
+#buttons {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust gap as needed */
+}
+
+#buttons a {
+    text-decoration: none;
+    color: black;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
     z-index: 100;
     transition: all ease 0.5s;
-    text-decoration: none;
+    display: block;
+    margin: 0 15px;
+}
+
+#buttons i {
+    font-size: 2rem; 
+    color: black; 
+    cursor: pointer;
+    display: none; 
+}
+
+#btn::after, #signup::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+#btn:hover::after, #signup:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#btn:hover, #signup:hover {
+    background-color: green;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position:absolute;
+    top: 110px;
+    right: 0px;
+    background-color: white; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
     color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.show {
     display: block;
 }
 
-
-#btn::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-#signup::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-#btn:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-#signup:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-#btn:hover{
-    background-color: green;
-    color: white;
-    padding: 12px;
-    border-radius: 5px;
-}
-#signup:hover{
-    background-color: green;
-    color: white;
-    padding: 12px;
-    border-radius: 5px;
-}
-#buttons{
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    gap: 70px;
-}
 video{
     position: fixed;
     width: 100%;
@@ -231,7 +242,11 @@ video{
     background-image: url("https://img.freepik.com/free-vector/quick-helpful-tips-advice-yellow-background-vector-illustration_1017-40994.jpg?w=740&t=st=1719051166~exp=1719051766~hmac=90d2fe17c5a9d9095742e2c2668dc8e7684c11e18d2d8b771f5582cab5e78c14");
 }
 #card3{
-    background-image: url("https://cdn.pixabay.com/photo/2015/01/13/13/21/person-598191_1280.jpg");
+    background: transparent;
+    background-image: url("https://cdn.pixabay.com/photo/2023/02/05/17/33/ai-generated-7770055_1280.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #card4{
     background-image: url("https://img.freepik.com/free-vector/select-concept-illustration_114360-383.jpg?t=st=1719051330~exp=1719054930~hmac=967f2a94c2b3b554fb45719b7772365dd1010559f40cf54918420967754a0869&w=740");
@@ -270,6 +285,13 @@ video{
     opacity: 0;
     transition: opacity 0.6s ease;
 }
+
+#overlay a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
 .card:hover #overlay::after {
     opacity: 1;
 }
@@ -284,6 +306,104 @@ video{
     transform: scale(1.1) ; 
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
     background-color: #e0e0e0; 
+}
+
+@media (max-width:800px) {
+
+    #logo{
+        display: flex;
+        align-items: center;
+    }
+    #image{
+        height: 55px;
+    }
+    #logo p {
+        font-size: 25px;
+    }
+
+    #eco{
+        color:white;
+    }
+
+    #buttons{
+        display: flex;
+        align-items: center;
+    }
+    #buttons a {
+        display: none;
+    }
+
+    #buttons i {
+        margin-right: 15px;
+        font-weight: 900;
+        display: block;
+    }
+
+    #page1 img{
+        display: none;
+    }
+
+    #page1 {
+        background-image: url("https://img.freepik.com/free-photo/modern-smartphone-with-live-abstract-wallpaper-coming-out-screen_23-2151033605.jpg?t=st=1719668633~exp=1719672233~hmac=a5634758823b2c62fe09bf21d88309d010da4fb84f43123596183cae9e2027ed&w=360");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #content{
+        background-color:rgba(0, 0, 0, 0.5);
+        width: 90%;
+        padding: 50px;
+        border-radius:18px ;
+    }
+    #content h1{
+        font-size: 28px;
+        color: white;
+    }
+
+    #content span{
+        color:rgb(2, 182, 2);
+    }
+
+    #content h2{
+        font-size: 25px;
+        color: white;
+    }
+
+    #content p{
+        margin-top: 10px;
+        font-size: 14px;
+        width: 98%;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    #line1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #line2{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    #card1{
+        margin-top: 100px;
+    }
+
+    #overlay{
+        font-size: 10px;
+    }
+    #overlay p{
+        font-size: 13px;
+        font-weight: 600;
+    }
 }
 
   

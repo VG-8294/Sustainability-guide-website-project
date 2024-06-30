@@ -138,3 +138,10 @@ body{
     padding: 13px;
     border-radius: 5px;
 }
+
+@media (max-width:800px) {
+    #signup-form{
+        width: 70vw;
+        padding:10vw;
+    }
+}
