@@ -33,4 +33,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Thank you for visiting our project! We hope you find our website helpful and inspiring in your journey towards sustainable living. If you have any questions or feedback, feel free to
 
-
+![alt text](<Screenshot 2024-06-30 163440.png>)
