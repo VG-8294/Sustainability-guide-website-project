@@ -44,6 +44,14 @@ const originalColor = "green";  // Original text color
             }
         });
 
+        gsap.from("#content",{
+            opacity:0,
+            // x:-400,
+            duration:1,
+            delay:0.5,
+            // stagger:10,
+        })
+
         const menuIcon = document.querySelector('#menu-icon');
         const menuBtns = document.querySelectorAll(".btn")
         const dropdownMenu = document.querySelector('#dropdown');
